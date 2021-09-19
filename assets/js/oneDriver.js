@@ -27,7 +27,7 @@ $(document).ready(function() {
       data.repairing.forEach(obj => {
         const newRow = _repairingTable.row
           .add([
-            moment(obj.date).format("YYYY-MM-DD"),
+            moment(data.date).format("YYYY-MM-DD"),
             obj.clientName || FALSE,
             obj.clientPhone || FALSE,
             ` <a href="./onePartner.html?_id=${obj.partner}">${
