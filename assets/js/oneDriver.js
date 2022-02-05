@@ -27,7 +27,10 @@ $(document).ready(function() {
       data.repairing.forEach(obj => {
         const newRow = _repairingTable.row
           .add([
-            moment(data.date).format("YYYY-MM-DD"),
+            moment(
+              new Date(new Date(obj.date).toLocaleString("en-US", {timeZone:"UTC"}))
+
+            ).format("YYYY-MM-DD"),
             obj.clientName || FALSE,
             obj.clientPhone || FALSE,
             ` <a href="./onePartner.html?_id=${obj.partner}">${
@@ -54,7 +57,9 @@ $(document).ready(function() {
         const row = _repairingTable.row(`#${new Date(obj._id).getTime()}`);
         const rowNode = row
           .data([
-            moment(obj.date).format("YYYY-MM-DD"),
+            moment(
+              new Date(new Date(obj.date).toLocaleString("en-US", {timeZone:"UTC"}))
+            ).format("YYYY-MM-DD"),
             obj.clientName || FALSE,
             obj.clientPhone || FALSE,
             ` <a href="./onePartner.html?_id=${obj.partner}">${
@@ -143,7 +148,10 @@ $(document).ready(function() {
       addToRepairingTable(obj);
       const newRow = travelTable.row
         .add([
-          moment(obj.date).format("YYYY-MM-DD"),
+          moment(
+            new Date(new Date(obj.date).toLocaleString("en-US", {timeZone:"UTC"}))
+
+          ).format("YYYY-MM-DD"),
           obj.expenses,
           obj.cashTo,
           obj.cashBack,
@@ -168,7 +176,10 @@ $(document).ready(function() {
         addToRepairingTable(data);
         const rowNode = row
           .data([
-            moment(data.date).format("YYYY-MM-DD"),
+            moment(
+              new Date(new Date(data.date).toLocaleString("en-US", {timeZone:"UTC"}))
+
+            ).format("YYYY-MM-DD"),
             data.expenses,
             data.cashTo,
             data.cashBack,
@@ -381,7 +392,10 @@ $(document).ready(function() {
       __DATA__.payment = [...__DATA__.payment, obj];
       const newRow = paymentTable.row
         .add([
-          moment(obj.date).format("YYYY-MM-DD"),
+          moment(
+            new Date(new Date(obj.date).toLocaleString("en-US", {timeZone:"UTC"}))
+
+          ).format("YYYY-MM-DD"),
           obj.amount,
           renderTableAction(obj._id)
         ])
@@ -400,7 +414,10 @@ $(document).ready(function() {
       ) {
         const rowNode = row
           .data([
-            moment(data.date).format("YYYY-MM-DD"),
+            moment(
+              new Date(new Date(data.date).toLocaleString("en-US", {timeZone:"UTC"}))
+
+            ).format("YYYY-MM-DD"),
             data.amount,
             renderTableAction(data._id)
           ])
@@ -586,7 +603,10 @@ $(document).ready(function() {
       __DATA__.expenses = [...__DATA__.expenses, obj];
       const newRow = expensesTable.row
         .add([
-          moment(obj.date).format("YYYY-MM-DD"),
+          moment(
+            new Date(new Date(obj.date).toLocaleString("en-US", {timeZone:"UTC"}))
+
+          ).format("YYYY-MM-DD"),
           obj.reason,
           obj.amount,
           obj.onCar ? TRUE : FALSE,
@@ -608,7 +628,10 @@ $(document).ready(function() {
       ) {
         const rowNode = row
           .data([
-            moment(data.date).format("YYYY-MM-DD"),
+            moment(
+              new Date(new Date(data.date).toLocaleString("en-US", {timeZone:"UTC"}))
+
+            ).format("YYYY-MM-DD"),
             data.reason,
             data.amount,
             data.onCar ? TRUE : FALSE,
