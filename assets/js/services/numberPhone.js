@@ -1,4 +1,4 @@
-const endPoint = "http://localhost:8888/api/user";
+const endPoint = "http://13.38.211.79:8888/api/user";
 
 const headers = {};
 
