@@ -1,4 +1,4 @@
-const endPoint = "https://amyal-one.herokuapp.com/api/user";
+const endPoint = "http://localhost:8888/api/user";
 
 const headers = {};
 

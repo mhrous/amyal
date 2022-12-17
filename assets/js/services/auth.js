@@ -1,4 +1,4 @@
-const endPoint = "https://amyal-one.herokuapp.com";
+const endPoint = "http://localhost:8888";
 
 
 const logIn = ({ data, success, error }) => {

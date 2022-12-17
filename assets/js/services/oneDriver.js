@@ -1,4 +1,4 @@
-const endPoint = "https://amyal-one.herokuapp.com/api";
+const endPoint = "http://localhost:8888/api";
 const headers = {};
 
 const id = window.location.search.split("=")[1];
